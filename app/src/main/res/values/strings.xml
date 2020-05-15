@@ -8,4 +8,7 @@
     <string name="kph">км/ч</string>
     <string name="mph">мил/ч</string>
     <string name="to_mph">В мил/ч</string>
+
+    <string name="mps">м/сек</string>
+    <string name="to_mps">В м/сек</string>
 </resources>

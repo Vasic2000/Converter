@@ -19,26 +19,26 @@ public class ConvertActivity extends AppCompatActivity {
         destText = findViewById(R.id.fahrenheitValue);
     }
 
-    // обработка нажатия
-    public void onToFahrenheitClick(View view) {
-        // получить входное значение
-        float sourceValue = Float.parseFloat(sourceText.getText().toString());
-        // инстанцировать конвертер
-        Converter converter = new Converter(sourceValue);
-        // преобразовать, обратите внимание на параметр ConvertToFahrenheit
-        float destValue = converter.Convert(new ConvertToFahrenheit()).GetResult();
-        // записать результат в элемент
-        destText.setText(String.format("%.02f", destValue));
-    }
+//    // обработка нажатия
+//    public void onToFahrenheitClick(View view) {
+//        // получить входное значение
+//        float sourceValue = Float.parseFloat(sourceText.getText().toString());
+//        // инстанцировать конвертер
+//        Converter converter = new Converter(sourceValue);
+//        // преобразовать, обратите внимание на параметр ConvertToFahrenheit
+//        float destValue = converter.Convert(new ConvertToFahrenheit()).GetResult();
+//        // записать результат в элемент
+//        destText.setText(String.format("%.02f", destValue));
+//    }
 
     // обработка нажатия
-    public void onToMPHClick(View view) {
+    public void onToMPSClick(View view) {
         // получить входное значение
         float sourceValue = Float.parseFloat(sourceText.getText().toString());
         // инстанцировать конвертер
         Converter converter = new Converter(sourceValue);
         // преобразовать, обратите внимание на параметр ConvertToFahrenheit
-        float destValue = converter.Convert(new ConvertToMile()).GetResult();
+        float destValue = converter.Convert(new ConvertToMPS()).GetResult();
         // записать результат в элемент
         destText.setText(String.format("%.02f", destValue));
     }

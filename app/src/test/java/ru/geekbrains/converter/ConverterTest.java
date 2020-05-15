@@ -1,10 +1,11 @@
 package ru.geekbrains.converter;
 
+import org.hamcrest.MatcherAssert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.runners.MockitoJUnitRunner;
 import static org.hamcrest.CoreMatchers.is;
-import static org.junit.Assert.assertThat;
+import static org.hamcrest.CoreMatchers.not;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 
@@ -19,10 +20,8 @@ public class ConverterTest {
         ConvertTo convertTo = mock(ConvertTo.class);
         float sourceValue = 22; // Это исходное значение
         Converter converter = new Converter(sourceValue);
-
         // Подставляем мок-объект в качестве реализации в метод конвертера
         converter.Convert(convertTo);
-
         // Нам интересно то, что метод Do интерфейса ConvertTo был вызван.
         verify(convertTo).Do(22);
     }
@@ -35,7 +34,7 @@ public class ConverterTest {
         float actual = converter.GetResult();   // Получить результат, неважно что вычислили
 
         // assertThat использует матчеры, is это матчер
-        assertThat(actual, is(0f)); // тип float по умолчанию имеет значенрие 0
+        MatcherAssert.assertThat(actual, is(0f)); // тип float по умолчанию имеет значенрие 0
     }
 
     // Интеграционный тест, проверяем взаимодействие объекта Converter и ConvertToFahrenheit
@@ -45,28 +44,41 @@ public class ConverterTest {
         Converter converter = new Converter(sourceValue);
         // Вместо мок-объекта используем реальный объект
         float actual = converter.Convert(new ConvertToFahrenheit()).GetResult();
-        assertThat(actual, is(5f));
+        MatcherAssert.assertThat(actual, is(5f));
     }
 
     @Test
     public void ConvertToCelsius_Do_UnitTest() throws Exception{
         ConvertTo convertTo = new ConvertToCelsius();
         float actual = convertTo.Do(5);
-        assertThat(actual, is(-15f));
+        MatcherAssert.assertThat(actual, is(-15f));
     }
 
     @Test
     public void ConvertToFahrenheit_Do_UnitTest() throws Exception{
         ConvertTo convertTo = new ConvertToFahrenheit();
         float actual = convertTo.Do(-15);
-        assertThat(actual, is(5f));
+        MatcherAssert.assertThat(actual, is(5f));
     }
 
     @Test
     public void ConvertToMile_Do_UnitTest() throws Exception{
         ConvertTo convertTo = new ConvertToMile();
         float actual = convertTo.Do(2);
-        assertThat(actual, is(1.24274f));
+        MatcherAssert.assertThat(actual, is(1.24274f));
+    }
+
+    @Test
+    public void ConvertToMPS_Do_UnitTest() throws Exception{
+        ConvertTo convertTo = new ConvertToMPS();
+        float actual = convertTo.Do(36);
+        MatcherAssert.assertThat(actual, is(10.00f));
+
+        float actual2 = convertTo.Do(72);
+        MatcherAssert.assertThat(actual2, is(20.00f));
+
+        float actual3 = convertTo.Do(72);
+        MatcherAssert.assertThat(actual3, not(24.00f));
     }
 
 }
