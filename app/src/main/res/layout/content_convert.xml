@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -34,7 +34,7 @@
         android:id="@+id/celsiusLabel"
         android:layout_width="56dp"
         android:layout_height="17dp"
-        android:text="@string/celsius"
+        android:text="@string/kph"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="25dp"
         android:layout_marginLeft="16dp"
@@ -44,7 +44,7 @@
         android:id="@+id/fahrenheitLabel"
         android:layout_width="78dp"
         android:layout_height="17dp"
-        android:text="@string/fahrenheit"
+        android:text="@string/mps"
         android:layout_marginLeft="16dp"
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginTop="99dp"
@@ -56,9 +56,9 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="72dp"
         android:layout_marginTop="11dp"
-        android:text="@string/to_fahrenheit"
-        android:onClick="onToFahrenheitClick"
+        android:onClick="onToMPSClick"
+        android:text="@string/to_mps"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/celsiusValue" />
 
-</android.support.constraint.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
