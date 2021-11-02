@@ -1,14 +1,15 @@
 <resources>
     <string name="app_name">Converter</string>
     <string name="action_settings">Settings</string>
-    <string name="celsius">Цельсия</string>
-    <string name="fahrenheit">Фаренгейта</string>
-    <string name="to_fahrenheit">В фаренгейты</string>
 
     <string name="kph">км/ч</string>
     <string name="mph">мил/ч</string>
-    <string name="to_mph">В мил/ч</string>
+    <string name="to_mph">км/ч &lt;&gt; мил/час</string>
 
     <string name="mps">м/сек</string>
-    <string name="to_mps">В м/сек</string>
+    <string name="to_mps">км/ч &lt;&gt; м/сек</string>
+
+    <string name="celsius">Цельсия</string>
+    <string name="fahrenheit">Фаренгейта</string>
+    <string name="to_fahrenheit">&#xb0;С &lt;&gt; &#xb0;F</string>
 </resources>

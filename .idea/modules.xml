@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Converter.iml" filepath="$PROJECT_DIR$/Converter.iml" group="Converter" />
-      <module fileurl="file://$PROJECT_DIR$/app/Converter-app.iml" filepath="$PROJECT_DIR$/app/Converter-app.iml" group="Converter/app" />
-      <module fileurl="file://$PROJECT_DIR$/IdeaProjects-Converter.iml" filepath="$PROJECT_DIR$/IdeaProjects-Converter.iml" group="Converter" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="Converter/app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Interview.iml" filepath="$PROJECT_DIR$/.idea/modules/Interview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Interview.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Interview.app.iml" />
     </modules>
   </component>
 </project>

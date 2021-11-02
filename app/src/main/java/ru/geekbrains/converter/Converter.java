@@ -20,7 +20,7 @@ class Converter {
         _destValue = convertTo.Do(_sourceValue);
 
         // Здесь класс возвращает сам себя, для удобства работы.
-        return  this;
+        return this;
     }
 
     // Метод возвращает результат
